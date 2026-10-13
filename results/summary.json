@@ -1,0 +1,214 @@
+{
+ "valuation_date": "2026-10-12",
+ "history": [
+  "2004-09-07",
+  "2026-10-12"
+ ],
+ "sst": {
+  "rbc": 21.2838,
+  "mvm": 2.5699,
+  "es": 7.8446,
+  "tc": 10.4146,
+  "ratio": 2.3856,
+  "es_market": 5.0899,
+  "es_insurance": 7.45,
+  "var_market": 4.2504,
+  "sc0": 9.7414,
+  "stand_alone_market_es": {
+   "USD rates": 2.5434,
+   "EUR rates": 0.6123,
+   "credit spread": 2.9638,
+   "equity": 2.14,
+   "EUR/USD": 0.5453
+  },
+  "stand_alone_insurance_es": {
+   "nat cat": 7.2645,
+   "non-cat": 1.9326,
+   "reserve development": 9.5909,
+   "L&H pandemic": 3.1696,
+   "L&H trend": 1.0563
+  },
+  "natcat_expected_loss": 1.0883
+ },
+ "balance_sheet": {
+  "gov_usd": 45.0,
+  "gov_eur": 15.0,
+  "corp_usd": 25.0,
+  "equity": 6.0,
+  "cash": 5.0,
+  "pc_usd": 35.752,
+  "pc_eur": 12.558,
+  "lh_usd": 26.406,
+  "assets": 96.0,
+  "bel": 74.716,
+  "rbc": 21.284
+ },
+ "verification": {
+  "pricing_identity_max_abs_error": 3.552713678800501e-15,
+  "dv01_full_vs_analytic": {
+   "full": -0.011107437539351395,
+   "analytic_first_order": -0.011110581664928596,
+   "rel_diff": 0.0002829847862174626
+  },
+  "es_estimator": {
+   "normal_sample": 2.6610608602522534,
+   "normal_exact": 2.665214220345808,
+   "t4_sample": 5.2147830928193875,
+   "t4_exact": 5.220584194492224
+  },
+  "ratio_seed_mean_sd": [
+   2.3889462624198967,
+   0.01845599457845984
+  ],
+  "market_es_bootstrap_vs_overlapping": [
+   5.0899005286955425,
+   5.46913758916583
+  ],
+  "identity_max_abs_error": 0.0,
+  "natcat_mean_sim_vs_exact": [
+   1.0929604402561057,
+   1.0882826999946678,
+   0.0028207418057658233
+  ]
+ },
+ "bridge": {
+  "Book equity (locked-in discount rates)": 19.9071,
+  "Remove intangibles": -3.0,
+  "Liabilities at current market rates": 4.3767,
+  "Market value margin": -2.5699
+ },
+ "bridge_closure_error": 0.0,
+ "sensitivities": {
+  "Rates -100 bp": {
+   "delta_rbc": 1.4994,
+   "ratio": 2.5767
+  },
+  "Rates +100 bp": {
+   "delta_rbc": -1.4093,
+   "ratio": 2.2059
+  },
+  "Credit spreads +100 bp": {
+   "delta_rbc": -1.1092,
+   "ratio": 2.2442
+  },
+  "Equities -30 %": {
+   "delta_rbc": -1.8,
+   "ratio": 2.1561
+  },
+  "EUR/USD -15 %": {
+   "delta_rbc": -0.3662,
+   "ratio": 2.3389
+  },
+  "1-in-200 hurricane": {
+   "delta_rbc": -7.2986,
+   "ratio": 1.4552
+  }
+ },
+ "history_market_es": [
+  {
+   "date": "2008-12-31",
+   "es_market": 7.6441739941048015,
+   "usd10": 0.022844047997003986
+  },
+  {
+   "date": "2009-12-31",
+   "es_market": 6.901273472367128,
+   "usd10": 0.03943448667618763
+  },
+  {
+   "date": "2010-12-31",
+   "es_market": 6.411125613407545,
+   "usd10": 0.03402964073028495
+  },
+  {
+   "date": "2011-12-30",
+   "es_market": 6.364488408035773,
+   "usd10": 0.01938782225330896
+  },
+  {
+   "date": "2012-12-31",
+   "es_market": 6.084259553225022,
+   "usd10": 0.018271756069838517
+  },
+  {
+   "date": "2013-12-31",
+   "es_market": 5.737865359876995,
+   "usd10": 0.0313735384418321
+  },
+  {
+   "date": "2014-12-31",
+   "es_market": 5.516462256411849,
+   "usd10": 0.02190030452763158
+  },
+  {
+   "date": "2015-12-30",
+   "es_market": 5.35042851059158,
+   "usd10": 0.023247662203777247
+  },
+  {
+   "date": "2016-12-30",
+   "es_market": 5.151510391796711,
+   "usd10": 0.024660814314003722
+  },
+  {
+   "date": "2017-12-29",
+   "es_market": 4.979272394743373,
+   "usd10": 0.02388982263078834
+  },
+  {
+   "date": "2018-12-28",
+   "es_market": 4.884383903801949,
+   "usd10": 0.026974736362204498
+  },
+  {
+   "date": "2019-12-30",
+   "es_market": 4.853604970027382,
+   "usd10": 0.01894582017768527
+  },
+  {
+   "date": "2020-12-30",
+   "es_market": 5.763106785352065,
+   "usd10": 0.009417456610824541
+  },
+  {
+   "date": "2021-12-31",
+   "es_market": 5.4621610653093144,
+   "usd10": 0.015233626451641318
+  },
+  {
+   "date": "2022-12-30",
+   "es_market": 5.36951681806509,
+   "usd10": 0.037823225255438804
+  },
+  {
+   "date": "2023-12-29",
+   "es_market": 5.375203083929299,
+   "usd10": 0.03799691726320323
+  },
+  {
+   "date": "2024-12-30",
+   "es_market": 5.213826815433339,
+   "usd10": 0.04477041776000533
+  },
+  {
+   "date": "2025-12-31",
+   "es_market": 5.115931865471645,
+   "usd10": 0.04157893655821545
+  }
+ ],
+ "backtest": {
+  "windows": 206,
+  "independent_years": 17.2,
+  "exceedances": 0,
+  "expected": 2.06,
+  "kupiec_LR": 4.140738371642597,
+  "kupiec_p": 0.04186290540306359,
+  "worst": {
+   "date": "2021-11-01",
+   "var99": 4.494540024003588,
+   "es99": 5.511531247701906,
+   "realised": 3.4954658082078396
+  }
+ },
+ "runtime_s": 142.0
+}
