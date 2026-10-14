@@ -37,6 +37,7 @@ ins = r["insurance"]
 out["sst"]["stand_alone_insurance_es"] = {k: round(float(expected_shortfall(-v)), 4)
                                           for k, v in ins.items() if not k.startswith("_") and k != "new business (expected)"}
 out["sst"]["natcat_expected_loss"] = round(natcat_mean(), 4)
+out["sst"]["expected_new_business_result"] = round(float(ins["new business (expected)"][0]), 4)
 out["balance_sheet"] = {k: round(float(v), 3) for k, v in r["base"].items()}
 
 # ------------------------------------------------------------------ 2. verification
@@ -178,7 +179,7 @@ fig.tight_layout(); fig.savefig(FIG / "fig2_distribution.png", dpi=160); plt.clo
 
 # fig3: target capital build-up
 sa_m = out["sst"]["stand_alone_market_es"]; sa_i = out["sst"]["stand_alone_insurance_es"]
-items = list(sa_m.items()) + list(sa_i.items())
+items = list(sa_m.items()) + list(sa_i.items()) + [("expected new-business result", -out["sst"]["expected_new_business_result"])]
 div = r["es"] - sum(v for _, v in items)
 labels = [k for k, _ in items] + ["diversification", "MVM", "target capital", "RBC"]
 vals = [v for _, v in items] + [div, r["mvm"]]

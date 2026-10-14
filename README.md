@@ -19,14 +19,15 @@ SST capital, sensitivities, and a backtest of the market-risk model.
 | Assets (market value) | 96.0 |
 | Best-estimate liabilities (P&C USD/EUR reserves, L&H) | 74.7 |
 | **Risk-bearing capital (RBC)** | **21.3** |
-| One-year ES 99 %: market 5.1, insurance 7.5, **total 7.8** (diversification 24.0) | 7.8 |
+| One-year ES 99 %: market 5.1, insurance 7.5, **total 7.8** (net of the expected new-business result, 3.7) | 7.8 |
 | Market value margin (6 % cost of capital on run-off capital) | 2.6 |
 | **Target capital = ES + MVM** | **10.4** |
 | **SST ratio = (RBC − MVM) / (TC − MVM)** | **239 %** (± 1.8 % Monte Carlo, 10 seeds) |
 
 - **Largest risks.** Stand-alone ES: reserve development 9.6, nat cat 7.3 (North Atlantic hurricane dominates),
-  credit spreads 3.0, USD rates 2.5, equity 2.1. Market and insurance risk are simulated independently, so
-  the total (7.8) is far below the sum of the parts.
+  credit spreads 3.0, USD rates 2.5, equity 2.1. The ten stand-alone ES values add up to 31.8; the total is
+  7.8 because the risks are simulated independently (diversification 20.3) and the one-year result includes
+  the expected profit on new business (3.7), as the SST one-year view does.
 - **Sensitivities** (`fig5`): rates −100 bp → 258 %, +100 bp → 221 %; spreads +100 bp → 224 %;
   equities −30 % → 216 %; EUR/USD −15 % → 234 %; a 1-in-200 hurricane (USD 7.3 bn) → 146 %.
   Assets are longer than liabilities here, so falling rates *raise* the ratio.

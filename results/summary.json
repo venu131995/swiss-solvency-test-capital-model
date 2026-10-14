@@ -28,7 +28,8 @@
    "L&H pandemic": 3.1696,
    "L&H trend": 1.0563
   },
-  "natcat_expected_loss": 1.0883
+  "natcat_expected_loss": 1.0883,
+  "expected_new_business_result": 3.7117
  },
  "balance_sheet": {
   "gov_usd": 45.0,
@@ -210,5 +211,5 @@
    "realised": 3.4954658082078396
   }
  },
- "runtime_s": 142.0
+ "runtime_s": 151.7
 }
